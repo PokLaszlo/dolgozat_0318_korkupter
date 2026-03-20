@@ -1,3 +1,13 @@
+/*
+* File: Body.js
+* Author: Pók László
+* Copyright: 2026, Pók László
+* Group: Szoft II-N
+* Date: 2026-03-20
+* Github: https://github.com/pokLaszlo/
+* Licenc: MIT
+*/
+
 import { StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import Input from './Input'
@@ -9,7 +19,6 @@ export default function Body() {
     const [res, setRes] = useState(0)
     return (
         <View style={styles.container}>
-            <Text>Köralapú henger térfogatának kiszámítása</Text>
             <Input labeltext='Henger alapjának sugara (méterben)' onChangeText={setRadius}/>
             <Input labeltext='Henger magassága (méterben)' onChangeText={setHeight}/>
             <MyButton text='Számítás' onpress={()=>{
@@ -22,6 +31,8 @@ export default function Body() {
 
 const styles = StyleSheet.create({
     container: {
-
+        backgroundColor:"rgba(128, 57, 175, 0.75)",
+        width:"100%",
+        height:"80%",
     }
 })
